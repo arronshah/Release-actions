@@ -31,6 +31,7 @@ TestPluginAudioProcessor::TestPluginAudioProcessor()
     //another feature
     //another fix
     //another feature 2
+    //another fix 2
 }
 
 TestPluginAudioProcessor::~TestPluginAudioProcessor()
