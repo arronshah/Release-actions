@@ -9,6 +9,9 @@ on:
 concurrency:
   group: "main-branch"
 
+permissions:
+  contents: write
+
 jobs:
   changelog:
     runs-on: ubuntu-latest
