@@ -1,3 +1,12 @@
+## [0.6.1-alpha.1](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.0...v0.6.1-alpha.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* patch ([432e67b](https://github.com/arronshah/Release-actions/commit/432e67bc94a5bad36fe55f05c3bfd4a3f1bc3d32))
+
+
+
 ## [0.6.1-alpha.0](https://github.com/arronshah/Release-actions/compare/v0.6.0...v0.6.1-alpha.0) (2024-03-04)
 
 
@@ -44,20 +53,6 @@
 ### Features
 
 * delivered big feature ([21b323f](https://github.com/arronshah/Release-actions/commit/21b323fd61aeaf7b552aa16d7f77da7f2c55effb))
-
-
-
-# [0.4.0](https://github.com/arronshah/Release-actions/compare/v0.3.1...v0.4.0) (2024-03-04)
-
-
-### Bug Fixes
-
-* some bug fix ([cc2e03b](https://github.com/arronshah/Release-actions/commit/cc2e03b34b93de3d8cb0ea401e0bfc71eb390c0e))
-
-
-### Features
-
-* some big feature ([39d0851](https://github.com/arronshah/Release-actions/commit/39d0851a98e6d3df24490aac5844715eaf211d35))
 
 
 
