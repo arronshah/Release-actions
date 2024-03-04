@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/arronshah/Release-actions/compare/v0.3.0...v0.3.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* fix 2 ([2a7f8dd](https://github.com/arronshah/Release-actions/commit/2a7f8ddb1ba9a81021428798b8b070fbf4e245b9))
+
+
+
 # [0.3.0](https://github.com/arronshah/Release-actions/compare/v0.2.0...v0.3.0) (2024-03-04)
 
 
