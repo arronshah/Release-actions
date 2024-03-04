@@ -39,6 +39,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-branch: "release-from-${{ github.sha }}"
+          pre-release: true
+          pre-release-identifier: "alpha"
           skip-git-pull: true
 
       # create PR using GitHub CLI
