@@ -29,6 +29,7 @@ TestPluginAudioProcessor::TestPluginAudioProcessor()
     //delivered feature 2
     //some bug fix
     //another feature
+    //another fix
 }
 
 TestPluginAudioProcessor::~TestPluginAudioProcessor()
