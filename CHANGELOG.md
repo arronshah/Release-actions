@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/arronshah/Release-actions/compare/v0.2.0...v0.3.0) (2024-03-04)
+
+
+### Features
+
+* new feature ([fc40bc5](https://github.com/arronshah/Release-actions/commit/fc40bc51213bd5be0a11df2779a08d45a860fbdb))
+
+
+
 # [0.2.0](https://github.com/arronshah/Release-actions/compare/v0.1.0...v0.2.0) (2024-03-04)
 
 
