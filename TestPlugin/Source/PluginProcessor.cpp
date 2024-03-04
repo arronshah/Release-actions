@@ -22,6 +22,9 @@ TestPluginAudioProcessor::TestPluginAudioProcessor()
                        )
 #endif
 {
+    //task progress 1
+    // task progress 2
+    //delivered feature
 }
 
 TestPluginAudioProcessor::~TestPluginAudioProcessor()
