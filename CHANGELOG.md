@@ -1,4 +1,18 @@
-# 0.1.0 (2024-03-04)
+# [0.2.0](https://github.com/arronshah/Release-actions/compare/v0.1.0...v0.2.0) (2024-03-04)
+
+
+### Bug Fixes
+
+* another fix ([c877239](https://github.com/arronshah/Release-actions/commit/c877239c16ccbec8690621fa48af9d85f502e541))
+
+
+### Features
+
+* another feature ([6cff73e](https://github.com/arronshah/Release-actions/commit/6cff73e3ec35220c226f282d5fcbc078007aed85))
+
+
+
+# [0.1.0](https://github.com/arronshah/Release-actions/compare/bf8a9f0f16de95e58dacb77cc7af59924347c702...v0.1.0) (2024-03-04)
 
 
 ### Bug Fixes
