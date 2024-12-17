@@ -40,7 +40,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-branch: "release-from-${{ github.sha }}"
           pre-release: true
-          pre-release-identifier: "alpha"
+          pre-release-identifier: "pre-alpha"
           skip-bump: true
           skip-git-pull: true
 
