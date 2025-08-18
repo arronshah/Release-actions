@@ -18,6 +18,7 @@ TestPluginAudioProcessorEditor::TestPluginAudioProcessorEditor (TestPluginAudioP
     setSize (400, 300);
 
     //test fix 1
+    //test fix 2
 }
 
 TestPluginAudioProcessorEditor::~TestPluginAudioProcessorEditor()
