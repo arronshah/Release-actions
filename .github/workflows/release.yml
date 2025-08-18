@@ -47,9 +47,11 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-branch: "release-from-${{ github.sha }}"
           tag-prefix: "v"
-          skip-bump: true
+          skip-bump: false
           skip-git-pull: true
           skip-on-empty: false
+          version-file: ./package.json
+          version-path: version
 
       # 5. Debug: show changelog action outputs
       - name: Debug - changelog outputs
