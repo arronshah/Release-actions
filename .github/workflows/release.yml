@@ -47,7 +47,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-branch: "release-from-${{ github.sha }}"
           tag-prefix: "v"
-          skip-bump: false
+          skip-bump: true
           skip-git-pull: true
           skip-on-empty: false
           version-file: ./package.json
