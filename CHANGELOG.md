@@ -1,4 +1,4 @@
-# [0.7](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.1...v0.7) (2025-08-18)
+## [0.7.1](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.1...v0.7.1) (2025-08-18)
 
 
 ### Bug Fixes
@@ -11,6 +11,7 @@
 ### Features
 
 * test feat 1 ([c1fef9a](https://github.com/arronshah/Release-actions/commit/c1fef9ab63dcd89d615e509d67f8aeba3798e911))
+* test feat 2 ([f5c6fd5](https://github.com/arronshah/Release-actions/commit/f5c6fd5f947352968b07b7c907594811ab9d2bcc))
 
 
 
