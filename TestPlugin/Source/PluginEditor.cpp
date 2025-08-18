@@ -24,6 +24,7 @@ TestPluginAudioProcessorEditor::TestPluginAudioProcessorEditor (TestPluginAudioP
     //test feat 2
     // test fix 4
     // test feat 3
+    // test feat 4
 }
 
 TestPluginAudioProcessorEditor::~TestPluginAudioProcessorEditor()
