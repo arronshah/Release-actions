@@ -1,10 +1,11 @@
-# [0.1](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.1...v0.1) (2025-08-18)
+# [0.7](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.1...v0.7) (2025-08-18)
 
 
 ### Bug Fixes
 
 * test fix 1 ([285761d](https://github.com/arronshah/Release-actions/commit/285761d06af0e7509ea7339efde4b89ab1975bb9))
 * test fix 2 ([df4d1d6](https://github.com/arronshah/Release-actions/commit/df4d1d69088117ec6743031758456adc02bc0337))
+* test fix 3 ([2c6fc5f](https://github.com/arronshah/Release-actions/commit/2c6fc5f84a26c1ce5b73a6ae56bb688e381193ca))
 
 
 ### Features
