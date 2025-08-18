@@ -1,3 +1,17 @@
+# [0.8.0](https://github.com/arronshah/Release-actions/compare/v0.7.1...v0.8.0) (2025-08-18)
+
+
+### Bug Fixes
+
+* test fix 4 ([a34b3b3](https://github.com/arronshah/Release-actions/commit/a34b3b3d6f1005ef6a703ff9f2abc288ab7350b4))
+
+
+### Features
+
+* test feat 3 ([cd63cc4](https://github.com/arronshah/Release-actions/commit/cd63cc4a82fb4ec0409803b300e0d5bfc5816ad8))
+
+
+
 ## [0.7.1](https://github.com/arronshah/Release-actions/compare/v0.6.1-alpha.1...v0.7.1) (2025-08-18)
 
 
@@ -44,23 +58,6 @@
 ### Features
 
 * feature one ([02df5b7](https://github.com/arronshah/Release-actions/commit/02df5b76f8dde9c2c50b1c0b96458d5817308b47))
-
-
-
-## [0.5.1](https://github.com/arronshah/Release-actions/compare/v0.5.0...v0.5.1) (2024-03-04)
-
-
-### Bug Fixes
-
-* patch 1 ([6b00d5f](https://github.com/arronshah/Release-actions/commit/6b00d5f1574b53d9316ccf2fa4a48f988bf258b9))
-* patch 2 ([cd0d365](https://github.com/arronshah/Release-actions/commit/cd0d365b900a9f5f08230139d395014b6f943334))
-* patch 3 ([6bde8e6](https://github.com/arronshah/Release-actions/commit/6bde8e65fc9184a07e23e7d4c276444a6a40b92b))
-
-
-### Features
-
-* more big stuff ([f27826e](https://github.com/arronshah/Release-actions/commit/f27826ebb9c31cd927a93bdd7b4683001906503b))
-* task 1 ([6ed3832](https://github.com/arronshah/Release-actions/commit/6ed3832936d0f1cd69871fab6b56acc31f2e9bac))
 
 
 
