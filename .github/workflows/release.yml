@@ -58,7 +58,6 @@ jobs:
         run: |
           echo "=== Changelog Action Outputs ==="
           echo "Skipped: ${{ steps.changelog.outputs.skipped }}"
-          echo "Old tag: ${{ steps.changelog.outputs.old_tag || 'N/A' }}"
           echo "New tag: ${{ steps.changelog.outputs.tag || 'N/A' }}"
           echo ""
           echo "=== Clean changelog preview ==="
