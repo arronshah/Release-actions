@@ -1,10 +1,7 @@
 name: Releases
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "data/**"
+  repository_dispatch:
+  workflow_dispatch:
 
 concurrency:
   group: "main-branch"
@@ -13,55 +10,79 @@ permissions:
   contents: write
   pull-requests: write
 
-
 jobs:
   changelog:
     runs-on: ubuntu-latest
 
     steps:
-      # check out the repository with all releases
+      # 1. Check out the repository with full history
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Create a temporary, uniquely named branch to push release info to
-      - name: create temporary branch
-        run: git branch "release-from-${{ github.sha }}" "${{ github.sha }}"
+      - name: Fetch all tags
+        run: git fetch --tags --force
 
-      # switch to the temporary branch
-      - name: switch to new branch
-        run: git checkout release-from-${{ github.sha }}
+      # 2. Debug: list all tags and their commits
+      - name: Debug - list all tags before changelog
+        run: |
+          echo "=== All tags and their commits ==="
+          git show-ref --tags -d
+          echo ""
+          echo "=== Sorted tags (by version) ==="
+          git tag --sort=-v:refname
+          echo ""
+          echo "=== Latest reachable tag from HEAD ==="
+          git describe --tags --abbrev=0
 
-      # create release info and push it upstream
-      - name: conventional Changelog Action
+      # 3. Create and switch to a temporary branch
+      - name: Create and checkout temporary branch
+        run: git checkout -b "release-from-${{ github.sha }}"
+
+      # 4. Generate changelog
+      - name: Generate changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-branch: "release-from-${{ github.sha }}"
-          pre-release: true
-          pre-release-identifier: "pre-alpha"
+          tag-prefix: "v"
           skip-bump: true
           skip-git-pull: true
+          skip-on-empty: false
 
-      # create PR using GitHub CLI
-      - name: create PR with release info
+      # 5. Debug: show changelog action outputs
+      - name: Debug - changelog outputs
+        run: |
+          echo "=== Changelog Action Outputs ==="
+          echo "Skipped: ${{ steps.changelog.outputs.skipped }}"
+          echo "Old tag: ${{ steps.changelog.outputs.old_tag || 'N/A' }}"
+          echo "New tag: ${{ steps.changelog.outputs.tag || 'N/A' }}"
+          echo ""
+          echo "=== Clean changelog preview ==="
+          echo "${{ steps.changelog.outputs.clean_changelog || 'No changelog generated' }}"
+
+      # 6. Push the changelog changes to the temporary branch
+      - name: Push changelog to temp branch
         if: steps.changelog.outputs.skipped == 'false'
-        id: create-pr
-        run: gh pr create --base main --head release-from-${{ github.sha }} --title 'Merge new release into main' --body 'Created by Github action'
+        run: git push origin "release-from-${{ github.sha }}"
+
+      # 7. Create PR using GitHub CLI
+      - name: Create PR with release info
+        if: steps.changelog.outputs.skipped == 'false'
+        run: gh pr create --base main --head "release-from-${{ github.sha }}" --title 'Merge new release into main' --body 'Created by Github action'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # merge PR using GitHub CLI
-      - name: merge PR with release info
+      # 8. Merge PR using GitHub CLI
+      - name: Merge PR with release info
         if: steps.changelog.outputs.skipped == 'false'
-        id: merge-pr
         run: gh pr merge --admin --merge --subject 'Merge release info' --delete-branch
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # release info is now in main so we can continue as before
-      - name: create release with last commit
+      # 9. Create GitHub release
+      - name: Create release with last commit
         if: steps.changelog.outputs.skipped == 'false'
         uses: ncipollo/release-action@v1
         with:
